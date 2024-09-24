@@ -89,6 +89,12 @@
                 z-index: 0;
             }
 
+            .chatBox {
+                margin: 0;
+                border: 10px solid var(--white);
+                border-radius: 30px;
+            }
+
             .foreground {
                 display: grid;
                 grid-column-gap: 120px;
@@ -105,56 +111,54 @@
             <div class="backgroundOverlayLeft"></div>
             <div class="backgroundOverlayRight"></div>
             <div class="foreground">
-                <section class="chat">
-                    <div class="chatBox">
-                        <div class="chatBoxHeader">
-                            <div class="chatBoxHeaderOverlay"></div>
-                            <div class="chatBoxHeaderDetails">
-                                <img class="chatBoxHeaderDetailsBreadcrumb">
-                                <img class="chatBoxHeaderDetailsPicture" src="images/avatar.jpg">
-                                <div class="chatBoxHeaderDetailsNameColumn">
-                                    <label class="chatBoxHeaderDetailsNameColumnName">Samuel Green</label>
-                                    <label class="chatBoxHeaderDetailsNameColumnStatus">Available to Walk</label>
-                                </div>
-                                <img class="chatBoxHeaderDetailsBurgerMenu">
+                <div class="chatBox">
+                    <div class="chatBoxHeader">
+                        <div class="chatBoxHeaderOverlay"></div>
+                        <div class="chatBoxHeaderDetails">
+                            <img class="chatBoxHeaderDetailsBreadcrumb">
+                            <img class="chatBoxHeaderDetailsPicture" src="images/avatar.jpg">
+                            <div class="chatBoxHeaderDetailsNameColumn">
+                                <label class="chatBoxHeaderDetailsNameColumnName">Samuel Green</label>
+                                <label class="chatBoxHeaderDetailsNameColumnStatus">Available to Walk</label>
                             </div>
-                        </div>
-                        <div class="chatBoxMessageOut">
-                            That sounds great. I’d be happy with that.
-                        </div>
-                        <div class="chatBoxMessageOut">
-                            Could you send over some pictures of your dog, please?
-                        </div>
-                        <div class="chatBoxMessageInImages">
-                            <img src="images/dog-image-1.jpg" alt="first image of dog">
-                            <img src="images/dog-image-2.jpg" alt="second image of dog">
-                            <img src="images/dog-image-3.jpg" alt="third image of dog">
-                        </div>
-                        <div class="chatBoxMessageIn">
-                            Here are a few pictures. She’s a happy girl!
-                        </div>
-                        <div class="chatBoxMessageIn">
-                            Can you make it?
-                        </div>
-                        <div class="chatBoxMessageOut">
-                            She looks so happy! The time we discussed works. How long shall I take her out for?
-                        </div>
-                        <div class="chatBoxMessageOutPoll">
-                            <input type="radio">
-                            <label>30 minute walk</label>
-                            <label>$29</label>
-                        </div>
-                        <div class="chatBoxMessageOutPoll">
-                            <input type="radio">
-                            <label>1 hour walk</label>
-                            <label>$49</label>
-                        </div>
-                        <div class="chatBoxTypeBar">
-                            <input placeholder="Type a message…">
-                            <div class="chatBoxTypeBarOverlay"></div>
+                            <img class="chatBoxHeaderDetailsBurgerMenu">
                         </div>
                     </div>
-                </section>
+                    <div class="chatBoxMessageOut">
+                        That sounds great. I’d be happy with that.
+                    </div>
+                    <div class="chatBoxMessageOut">
+                        Could you send over some pictures of your dog, please?
+                    </div>
+                    <div class="chatBoxMessageInImages">
+                        <img src="images/dog-image-1.jpg" alt="first image of dog">
+                        <img src="images/dog-image-2.jpg" alt="second image of dog">
+                        <img src="images/dog-image-3.jpg" alt="third image of dog">
+                    </div>
+                    <div class="chatBoxMessageIn">
+                        Here are a few pictures. She’s a happy girl!
+                    </div>
+                    <div class="chatBoxMessageIn">
+                        Can you make it?
+                    </div>
+                    <div class="chatBoxMessageOut">
+                        She looks so happy! The time we discussed works. How long shall I take her out for?
+                    </div>
+                    <div class="chatBoxMessageOutPoll">
+                        <input type="radio" name="timeRange" value="0.5">
+                        <label>30 minute walk</label>
+                        <label>$29</label>
+                    </div>
+                    <div class="chatBoxMessageOutPoll">
+                        <input type="radio" name="timeRange" value="1">
+                        <label>1 hour walk</label>
+                        <label>$49</label>
+                    </div>
+                    <div class="chatBoxTypeBar">
+                        <input placeholder="Type a message…">
+                        <div class="chatBoxTypeBarOverlay"></div>
+                    </div>
+                </div>
                 <header>
                     <h1>Simple booking</h1>
                     <p>
