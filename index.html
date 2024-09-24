@@ -1,51 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Samuel Green
-  Available to Walk
-
-  That sounds great. I’d be happy with that.
-
-  Could you send over some pictures of your dog, please?
-
-  Here are a few pictures. She’s a happy girl!
-
-  Can you make it?
-
-  She looks so happy! The time we discussed works. How long shall I take her out for?
-
-  30 minute walk
-  $29
-
-  1 hour walk
-  $49
-
-  Type a message…
-
-  Simple booking
-
-  Stay in touch with our dog walkers through the chat interface. This makes it easy to 
-  discuss arrangements and make bookings. Once the walk has been completed you can rate 
-  your walker and book again all through the chat.
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+        <title>Philipp Kraatz | Advanced HTML+CSS</title>
+        <style></style>
+    </head>
+    <body>
+        <main>
+            <section class="chat">
+                <div class="chatBox">
+                    <div class="chatBoxHeader">
+                        <div class="chatBoxHeaderOverlay"></div>
+                        <div class="chatBoxHeaderDetails">
+                            <img class="chatBoxHeaderDetailsBreadcrumb">
+                            <img class="chatBoxHeaderDetailsPicture" src="images/avatar.jpg">
+                            <div class="chatBoxHeaderDetailsNameColumn">
+                                <label class="chatBoxHeaderDetailsNameColumnName">Samuel Green</label>
+                                <label class="chatBoxHeaderDetailsNameColumnStatus">Available to Walk</label>
+                            </div>
+                            <img class="chatBoxHeaderDetailsBurgerMenu">
+                        </div>
+                    </div>
+                    <div class="chatBoxMessageOut">
+                        That sounds great. I’d be happy with that.
+                    </div>
+                    <div class="chatBoxMessageOut">
+                        Could you send over some pictures of your dog, please?
+                    </div>
+                    <div class="chatBoxMessageInImages">
+                        <img src="images/dog-image-1.jpg" alt="first image of dog">
+                        <img src="images/dog-image-2.jpg" alt="second image of dog">
+                        <img src="images/dog-image-3.jpg" alt="third image of dog">
+                    </div>
+                    <div class="chatBoxMessageIn">
+                        Here are a few pictures. She’s a happy girl!
+                    </div>
+                    <div class="chatBoxMessageIn">
+                        Can you make it?
+                    </div>
+                    <div class="chatBoxMessageOut">
+                        She looks so happy! The time we discussed works. How long shall I take her out for?
+                    </div>
+                    <div class="chatBoxMessageOutPoll">
+                        <input type="radio">
+                        <label>30 minute walk</label>
+                        <label>$29</label>
+                    </div>
+                    <div class="chatBoxMessageOutPoll">
+                        <input type="radio">
+                        <label>1 hour walk</label>
+                        <label>$49</label>
+                    </div>
+                    <div class="chatBoxTypeBar">
+                        <input placeholder="Type a message…">
+                        <div class="chatBoxTypeBarOverlay"></div>
+                    </div>
+                </div>
+            </section>
+            <header>
+                <h1>Simple booking</h1>
+                <p>
+                    Stay in touch with our dog walkers through the chat interface. This makes it easy to
+                    discuss arrangements and make bookings. Once the walk has been completed you can rate
+                    your walker and book again all through the chat.
+                </p>
+            </header>
+        </main>
+        <footer class="attribution">
+            Coding challenge by <a href="https://www.frontendmentor.io/challenges" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="#">Philipp Kraatz</a>.
+        </footer>
+    </body>
 </html>
