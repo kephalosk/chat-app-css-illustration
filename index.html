@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+        <link rel="stylesheet" href="https://fonts.google.com/specimen/Rubik">
         <title>Philipp Kraatz | Advanced HTML+CSS</title>
         <style>
             :root {
@@ -32,11 +33,13 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                font-family: Rubik, sans-serif;
             }
 
-            header {
-                position: relative;
-                z-index: 1;
+            h1 {
+                font-size: 40px;
+                font-weight: 700;
+                color: var(--very-dark-desaturated-violet-main-heading);
             }
 
             main {
@@ -45,6 +48,12 @@
                 background-color: hsl(0, 0%, 100%);
                 padding: 148px 256px 148px 360px;
                 position: relative;
+            }
+
+            p {
+                letter-spacing: 1px;
+                line-height: 1.75;
+                color: var(--dark-grayish-violet-paragraph);
             }
 
             .attribution {
@@ -80,7 +89,12 @@
                 z-index: 0;
             }
 
-            .chat {
+            .foreground {
+                display: grid;
+                grid-column-gap: 120px;
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+                justify-content: center;
                 position: relative;
                 z-index: 1;
             }
@@ -90,64 +104,66 @@
         <main>
             <div class="backgroundOverlayLeft"></div>
             <div class="backgroundOverlayRight"></div>
-            <section class="chat">
-                <div class="chatBox">
-                    <div class="chatBoxHeader">
-                        <div class="chatBoxHeaderOverlay"></div>
-                        <div class="chatBoxHeaderDetails">
-                            <img class="chatBoxHeaderDetailsBreadcrumb">
-                            <img class="chatBoxHeaderDetailsPicture" src="images/avatar.jpg">
-                            <div class="chatBoxHeaderDetailsNameColumn">
-                                <label class="chatBoxHeaderDetailsNameColumnName">Samuel Green</label>
-                                <label class="chatBoxHeaderDetailsNameColumnStatus">Available to Walk</label>
+            <div class="foreground">
+                <section class="chat">
+                    <div class="chatBox">
+                        <div class="chatBoxHeader">
+                            <div class="chatBoxHeaderOverlay"></div>
+                            <div class="chatBoxHeaderDetails">
+                                <img class="chatBoxHeaderDetailsBreadcrumb">
+                                <img class="chatBoxHeaderDetailsPicture" src="images/avatar.jpg">
+                                <div class="chatBoxHeaderDetailsNameColumn">
+                                    <label class="chatBoxHeaderDetailsNameColumnName">Samuel Green</label>
+                                    <label class="chatBoxHeaderDetailsNameColumnStatus">Available to Walk</label>
+                                </div>
+                                <img class="chatBoxHeaderDetailsBurgerMenu">
                             </div>
-                            <img class="chatBoxHeaderDetailsBurgerMenu">
+                        </div>
+                        <div class="chatBoxMessageOut">
+                            That sounds great. I’d be happy with that.
+                        </div>
+                        <div class="chatBoxMessageOut">
+                            Could you send over some pictures of your dog, please?
+                        </div>
+                        <div class="chatBoxMessageInImages">
+                            <img src="images/dog-image-1.jpg" alt="first image of dog">
+                            <img src="images/dog-image-2.jpg" alt="second image of dog">
+                            <img src="images/dog-image-3.jpg" alt="third image of dog">
+                        </div>
+                        <div class="chatBoxMessageIn">
+                            Here are a few pictures. She’s a happy girl!
+                        </div>
+                        <div class="chatBoxMessageIn">
+                            Can you make it?
+                        </div>
+                        <div class="chatBoxMessageOut">
+                            She looks so happy! The time we discussed works. How long shall I take her out for?
+                        </div>
+                        <div class="chatBoxMessageOutPoll">
+                            <input type="radio">
+                            <label>30 minute walk</label>
+                            <label>$29</label>
+                        </div>
+                        <div class="chatBoxMessageOutPoll">
+                            <input type="radio">
+                            <label>1 hour walk</label>
+                            <label>$49</label>
+                        </div>
+                        <div class="chatBoxTypeBar">
+                            <input placeholder="Type a message…">
+                            <div class="chatBoxTypeBarOverlay"></div>
                         </div>
                     </div>
-                    <div class="chatBoxMessageOut">
-                        That sounds great. I’d be happy with that.
-                    </div>
-                    <div class="chatBoxMessageOut">
-                        Could you send over some pictures of your dog, please?
-                    </div>
-                    <div class="chatBoxMessageInImages">
-                        <img src="images/dog-image-1.jpg" alt="first image of dog">
-                        <img src="images/dog-image-2.jpg" alt="second image of dog">
-                        <img src="images/dog-image-3.jpg" alt="third image of dog">
-                    </div>
-                    <div class="chatBoxMessageIn">
-                        Here are a few pictures. She’s a happy girl!
-                    </div>
-                    <div class="chatBoxMessageIn">
-                        Can you make it?
-                    </div>
-                    <div class="chatBoxMessageOut">
-                        She looks so happy! The time we discussed works. How long shall I take her out for?
-                    </div>
-                    <div class="chatBoxMessageOutPoll">
-                        <input type="radio">
-                        <label>30 minute walk</label>
-                        <label>$29</label>
-                    </div>
-                    <div class="chatBoxMessageOutPoll">
-                        <input type="radio">
-                        <label>1 hour walk</label>
-                        <label>$49</label>
-                    </div>
-                    <div class="chatBoxTypeBar">
-                        <input placeholder="Type a message…">
-                        <div class="chatBoxTypeBarOverlay"></div>
-                    </div>
-                </div>
-            </section>
-            <header>
-                <h1>Simple booking</h1>
-                <p>
-                    Stay in touch with our dog walkers through the chat interface. This makes it easy to
-                    discuss arrangements and make bookings. Once the walk has been completed you can rate
-                    your walker and book again all through the chat.
-                </p>
-            </header>
+                </section>
+                <header>
+                    <h1>Simple booking</h1>
+                    <p>
+                        Stay in touch with our dog walkers through the chat interface. This makes it easy to
+                        discuss arrangements and make bookings. Once the walk has been completed you can rate
+                        your walker and book again all through the chat.
+                    </p>
+                </header>
+            </div>
         </main>
         <footer class="attribution">
             Coding challenge by <a href="https://www.frontendmentor.io/challenges" target="_blank">Frontend Mentor</a>.
