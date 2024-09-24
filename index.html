@@ -14,23 +14,73 @@
             --very-dark-desaturated-violet-main-heading: hsl(271, 36%, 24%);
             --dark-grayish-violet-paragraph: hsl(270, 7%, 64%);
 
-            //#### Gradients
-            //These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient:
-
             --light-magenta: hsl(293, 100%, 63%);
             --light-violet: hsl(264, 100%, 61%);
-
-            //### Secondary
 
             --white: hsl(0, 0%, 100%);
             --light-grayish-violet-app-background: hsl(270, 20%, 96%);
             --very-dark-desaturated-violet-submit-button: hsl(271, 36%, 24%);
             --very-light-magenta-radio-button-outline: hsl(289, 100%, 72%);
             }
+
+            body {
+                margin: 0;
+                border: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            header {
+                position: relative;
+                z-index: 1;
+            }
+
+            main {
+                margin: 0;
+                border: 0;
+                background-color: hsl(0, 0%, 100%);
+                padding: 148px 256px 148px 360px;
+                position: relative;
+            }
+
+            .attribution {
+                font-size: 11px;
+                text-align: center;
+            }
+
+            .attribution a {
+                color: hsl(228, 45%, 44%);
+            }
+
+            .backgroundOverlayLeft {
+                margin: 0;
+                border-radius: 275px;
+                background-image: linear-gradient(35deg, var(--light-violet), var(--light-magenta));
+                height: 1000px;
+                width: 550px;
+                left: -9%;
+                position: absolute;
+                transform: translateY(-45%);
+                z-index: 0;
+            }
+
+            .backgroundOverlayRight {
+                z-index: 0;
+            }
+
+            .chat {
+                position: relative;
+                z-index: 1;
+            }
         </style>
     </head>
     <body>
         <main>
+            <div class="backgroundOverlayLeft"></div>
+            <div class="backgroundOverlayRight"></div>
             <section class="chat">
                 <div class="chatBox">
                     <div class="chatBoxHeader">
