@@ -8,21 +8,23 @@
         <title>Philipp Kraatz | Advanced HTML+CSS</title>
         <style>
             :root {
-            --pale-violet-sub-heading: hsl(276, 100%, 81%);
-            --moderate-violet-chat-left: hsl(276, 55%, 52%);
-            --desaturated-dark-violet-chat-right: hsl(271, 15%, 43%);
-            --grayish-blue-placeholder-text: hsl(206, 6%, 79%);
-            --very-dark-desaturated-violet-main-heading: hsl(271, 36%, 24%);
-            --dark-grayish-violet-paragraph: hsl(270, 7%, 64%);
+                --pale-violet-sub-heading: hsl(276, 100%, 81%);
+                --moderate-violet-chat-left: hsl(276, 55%, 52%);
+                --desaturated-dark-violet-chat-right: hsl(271, 15%, 43%);
+                --grayish-blue-placeholder-text: hsl(206, 6%, 79%);
+                --very-dark-desaturated-violet-main-heading: hsl(271, 36%, 24%);
+                --dark-grayish-violet-paragraph: hsl(270, 7%, 64%);
 
-            --light-magenta: hsl(293, 100%, 63%);
-            --light-violet: hsl(264, 100%, 61%);
+                --light-magenta: hsl(293, 100%, 63%);
+                --light-violet: hsl(264, 100%, 61%);
 
-            --white: hsl(0, 0%, 100%);
-            --light-grayish-violet-app-background: hsl(270, 20%, 96%);
-            --light-violet-background: hsl(276, 100%, 90%, 0.15);
-            --very-dark-desaturated-violet-submit-button: hsl(271, 36%, 24%);
-            --very-light-magenta-radio-button-outline: hsl(289, 100%, 72%);
+                --white: hsl(0, 0%, 100%);
+                --light-grayish-violet-app-background: hsl(270, 20%, 96%);
+                --very-dark-desaturated-violet-submit-button: hsl(271, 36%, 24%);
+                --very-light-magenta-radio-button-outline: hsl(289, 100%, 72%);
+
+                --light-violet-background-transparent: hsl(276, 100%, 90%, 0.15);
+                --white-transparent: hsl(0, 0%, 100%, 0.8);
             }
 
             body {
@@ -46,7 +48,7 @@
                 margin: 0;
                 border: 0;
                 background-color: hsl(0, 0%, 100%);
-                padding: 148px 256px 148px 360px;
+                padding: 148px 240px 148px 360px;
                 position: relative;
             }
 
@@ -80,7 +82,7 @@
             .backgroundOverlayRight {
                 margin: 0;
                 border-radius: 275px;
-                background-color: var(--light-violet-background);
+                background-color: var(--light-violet-background-transparent);
                 height: 1000px;
                 width: 550px;
                 left: 77%;
@@ -91,14 +93,90 @@
 
             .chatBox {
                 margin: 0;
+                box-shadow: 0 20px 100px -35px var(--dark-grayish-violet-paragraph);
                 border: 10px solid var(--white);
                 border-radius: 30px;
+                background-color: var(--light-grayish-violet-app-background);
+                width: 226px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .chatBoxHeader {
+                border-radius: 30px 30px 5px 5px;
+                background-image: linear-gradient(90deg, var(--light-violet), var(--light-magenta));
+                position: relative;
+            }
+
+            .chatBoxHeaderDetails {
+                margin: 30px 16px 12px 16px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .chatBoxHeaderDetailsChevron {
+                height: 12px;
+                width: auto;
+                color: var(--white-transparent);
+            }
+
+            .chatBoxHeaderDetailsDots {
+                height: 14px;
+                width: auto;
+                color: var(--white-transparent);
+            }
+
+            .chatBoxHeaderDetailsNameColumn {
+                margin-left: 8px;
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+            }
+
+            .chatBoxHeaderDetailsNameColumnName {
+                margin-bottom: 3px;
+                display: block;
+                font-size: 11px;
+                font-weight: 700;
+                color: var(--white-transparent);
+            }
+
+            .chatBoxHeaderDetailsNameColumnStatus {
+                font-size: 8px;
+                color: var(--white-transparent);
+            }
+
+            .chatBoxHeaderDetailsPicture {
+                margin-left: 8px;
+                border: 1px solid var(--white-transparent);
+                border-radius: 50px;
+                height: 21px;
+                width: auto;
+            }
+
+            .chatBoxHeaderOverlay {
+                margin: 0;
+                border: 0;
+                border-radius: 0 0 15px 15px;
+                background-color: var(--white);
+                height: 20px;
+                width: 128px;
+                position: absolute;
+                left: calc(50% - 64px);
+                transform: translateY(0%);
+            }
+
+            .chatBoxMessageInImages img{
+                border-radius: 10px;
+                height: 40px;
+                width: auto;
             }
 
             .foreground {
                 display: grid;
-                grid-column-gap: 120px;
-                grid-template-columns: 1fr 1fr;
+                grid-column-gap: 110px;
+                grid-template-columns: auto 1fr;
                 align-items: center;
                 justify-content: center;
                 position: relative;
@@ -115,13 +193,13 @@
                     <div class="chatBoxHeader">
                         <div class="chatBoxHeaderOverlay"></div>
                         <div class="chatBoxHeaderDetails">
-                            <img class="chatBoxHeaderDetailsBreadcrumb">
-                            <img class="chatBoxHeaderDetailsPicture" src="images/avatar.jpg">
+                            <svg class="chatBoxHeaderDetailsChevron" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="298" height="512" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 298 511.93"><path fill="currentColor" fill-rule="nonzero" d="M285.77 441c16.24 16.17 16.32 42.46.15 58.7-16.16 16.24-42.45 16.32-58.69.16l-215-214.47c-16.24-16.16-16.32-42.45-.15-58.69L227.23 12.08c16.24-16.17 42.53-16.09 58.69.15 16.17 16.24 16.09 42.54-.15 58.7l-185.5 185.04L285.77 441z"/></svg>
+                            <img class="chatBoxHeaderDetailsPicture" src="images/avatar.jpg" alt="picture of avatar" aria-hidden="true">
                             <div class="chatBoxHeaderDetailsNameColumn">
                                 <label class="chatBoxHeaderDetailsNameColumnName">Samuel Green</label>
                                 <label class="chatBoxHeaderDetailsNameColumnStatus">Available to Walk</label>
                             </div>
-                            <img class="chatBoxHeaderDetailsBurgerMenu">
+                            <svg class="chatBoxHeaderDetailsDots" fill="currentColor" width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 10h4v4h-4zm0-6h4v4h-4zm0 12h4v4h-4z"/></svg>
                         </div>
                     </div>
                     <div class="chatBoxMessageOut">
