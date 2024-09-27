@@ -249,12 +249,13 @@
 
             .chatBoxTypeBar {
                 margin: 16px 8px 10px 8px;
+                position: relative;
             }
 
             .chatBoxTypeBar input{
                 border: 0;
                 border-radius: 30px;
-                padding: 12px 34px 12px 18px;
+                padding: 12px 40px 12px 18px;
                 width: 100%;
                 font-size: 12px;
                 color: var(--moderate-violet-chat-left);
@@ -263,6 +264,19 @@
             .chatBoxTypeBar input::placeholder{
                 font-size: 9px;
                 color: var(--grayish-blue-placeholder-text);
+            }
+
+            .chatBoxTypeBarChevron {
+                border-radius: 50px;
+                background-color: var(--very-dark-desaturated-violet-submit-button);
+                padding: 7px 10px;
+                height: 29px;
+                width: auto;
+                left: calc(100% - 35px);
+                transform: rotate(180deg) translateY(-5px);
+                color: var(--white);
+                position: absolute;
+                cursor: pointer;
             }
 
             .foreground {
@@ -346,7 +360,7 @@
                     </div>
                     <div class="chatBoxTypeBar">
                         <input placeholder="Type a message…">
-                        <div class="chatBoxTypeBarOverlay"></div>
+                        <svg class="chatBoxTypeBarChevron" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="298" height="512" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 298 511.93"><path fill="currentColor" fill-rule="nonzero" d="M285.77 441c16.24 16.17 16.32 42.46.15 58.7-16.16 16.24-42.45 16.32-58.69.16l-215-214.47c-16.24-16.16-16.32-42.45-.15-58.69L227.23 12.08c16.24-16.17 42.53-16.09 58.69.15 16.17 16.24 16.09 42.54-.15 58.7l-185.5 185.04L285.77 441z"/></svg>
                     </div>
                 </div>
                 <header>
