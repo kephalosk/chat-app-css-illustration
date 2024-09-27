@@ -50,6 +50,10 @@
                 color: var(--very-dark-desaturated-violet-main-heading);
             }
 
+            input {
+                margin: 0;
+            }
+
             main {
                 margin: 0;
                 border: 0;
@@ -225,6 +229,23 @@
                 color: var(--moderate-violet-chat-left);
             }
 
+            .chatBoxMessageOutPoll {
+                margin-top: 8px;
+                border-radius: 15px 15px 15px 5px;
+                background-image: linear-gradient(90deg, var(--light-magenta), var(--light-violet));
+                padding: 8px 16px 8px 8px;
+                max-width: 160px;
+                display: flex;
+                align-items: center;
+                color: var(--white-transparent);
+            }
+
+            .chatBoxMessageOutPoll input {
+                border: 10px solid black;
+                background-color: var(--light-magenta);
+                color: var(--light-magenta);
+            }
+
             .foreground {
                 display: grid;
                 grid-column-gap: 110px;
@@ -237,6 +258,18 @@
 
             .marginBottom {
                 margin-bottom: 8px;
+            }
+
+            .radioButtonPrice {
+                font-size: 14px;
+                font-weight: 700;
+                color: var(--white);
+            }
+
+            .radioButtonText {
+                margin-left: 8px;
+                flex-grow: 1;
+                font-size: 9px;
             }
         </style>
     </head>
@@ -284,13 +317,13 @@
                     </div>
                     <div class="chatBoxMessageOutPoll">
                         <input type="radio" name="timeRange" value="0.5">
-                        <label>30 minute walk</label>
-                        <label>$29</label>
+                        <label class="radioButtonText">30 minute walk</label>
+                        <label class="radioButtonPrice">$29</label>
                     </div>
                     <div class="chatBoxMessageOutPoll">
                         <input type="radio" name="timeRange" value="1">
-                        <label>1 hour walk</label>
-                        <label>$49</label>
+                        <label class="radioButtonText">1 hour walk</label>
+                        <label class="radioButtonPrice">$49</label>
                     </div>
                     <div class="chatBoxTypeBar">
                         <input placeholder="Type a message…">
