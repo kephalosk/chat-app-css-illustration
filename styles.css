@@ -55,6 +55,7 @@ main {
     background-color: hsl(0, 0%, 100%);
     padding: 148px 16vw 148px 25vw;
     position: relative;
+    overflow: hidden;
 
     @media (max-width: 700px) {
         padding: 65px 32px;
