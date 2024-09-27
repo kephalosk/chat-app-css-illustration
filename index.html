@@ -23,8 +23,13 @@
                 --very-dark-desaturated-violet-submit-button: hsl(271, 36%, 24%);
                 --very-light-magenta-radio-button-outline: hsl(289, 100%, 72%);
 
+                --moderate-violet-chat-left-transparent: hsl(276, 55%, 52%, 0.1);
                 --light-violet-background-transparent: hsl(276, 100%, 90%, 0.15);
                 --white-transparent: hsl(0, 0%, 100%, 0.8);
+            }
+
+            * {
+                box-sizing: border-box;
             }
 
             body {
@@ -103,6 +108,7 @@
             }
 
             .chatBoxHeader {
+                margin-bottom: 4px;
                 border-radius: 30px 30px 5px 5px;
                 background-image: linear-gradient(90deg, var(--light-violet), var(--light-magenta));
                 position: relative;
@@ -167,10 +173,30 @@
                 transform: translateY(0%);
             }
 
+            .chatBoxMessageInImages {
+                margin-top: 16px;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+            }
+
             .chatBoxMessageInImages img{
                 border-radius: 10px;
+                margin-right: 8px;
                 height: 40px;
                 width: auto;
+            }
+
+            .chatBoxMessageOut {
+                margin-top: 8px;
+                margin-left: 8px;
+                border-radius: 10px;
+                background-color: var(--moderate-violet-chat-left-transparent);
+                padding: 8px 12px 8px 8px;
+                max-width: 128px;
+                font-size: 8px;
+                line-height: 1.5;
+                color: var(--moderate-violet-chat-left);
             }
 
             .foreground {
